@@ -11,8 +11,15 @@ Input: [1,null,2,3]
 Output: [1,2,3]*/
 
 
-
-
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 
 /*Recursive method*/
 class Solution {
@@ -35,8 +42,7 @@ class Solution {
 	public List<Integer> preorderTraversal(TreeNode root) {
 	List<Integer> res = new ArrayList<Integer>();
 	//base case
-	if(root==null)
-	return res;
+	if(root==null) return res;
 	Stack<TreeNode> nodestack = new Stack<TreeNode>();
 	nodestack.push(root);
 	while(!nodestack.isEmpty()){
@@ -54,3 +60,4 @@ class Solution {
 	return res;
 	}
 }
+
